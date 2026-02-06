@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Carrera de Autobuses - Sorteo</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="hero">
+        <div class="hero-text">
+          <h1>Carrera de Autobuses</h1>
+          <p>
+            Sortea una opción con una carrera 2D de autobuses de estilo escolar,
+            en colores latinoamericanos.
+          </p>
+        </div>
+      </header>
+
+      <section class="panel setup">
+        <div class="setup-row">
+          <label for="option-count">¿Cuántas opciones?</label>
+          <input id="option-count" type="number" min="2" max="20" value="4" />
+          <button id="create-options" type="button">Crear opciones</button>
+        </div>
+        <div id="options-list" class="options-list"></div>
+        <div class="setup-actions">
+          <button id="start-race" type="button" class="primary">
+            Iniciar carrera
+          </button>
+          <button id="reset-race" type="button">Reiniciar</button>
+        </div>
+      </section>
+
+      <section class="panel race">
+        <div class="track">
+          <div class="track-label start">A</div>
+          <div class="track-label finish">B</div>
+          <div class="start-line"></div>
+          <div class="finish-line"></div>
+          <div id="bus-layer" class="bus-layer"></div>
+        </div>
+        <div id="result" class="result">Listo para comenzar.</div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
